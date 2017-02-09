@@ -1,8 +1,10 @@
 'use strict';
 
-const mongoose = require('mongoose'),
+var path = require('path'),
+  mongoose = require('mongoose'),
   Kitten = require('./models/kitty.model');
 
+mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost/test');
 
 var db = mongoose.connection;
@@ -19,5 +21,9 @@ db.once('open', function () {
     if (err) return console.error(err);
 
     fluffy.speak();
+
+    Kitten.find({}).remove().exec();
+
+    mongoose.disconnect();
   });
 });
