@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/jmreed0112358/mongoose-tutorial/issues"
   },
-  "homepage": "https://github.com/jmreed0112358/mongoose-tutorial#readme"
+  "homepage": "https://github.com/jmreed0112358/mongoose-tutorial#readme",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "mongoose": "^4.8.1"
+  }
 }
